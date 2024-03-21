@@ -5,13 +5,36 @@ import TestA from './components/TestA.vue'
 import TestB from './components/TestB.vue'
 import TestC from './components/TestC.vue'
 import TestComputedAttr from './components/TestComputedAttr.vue'
+import TestJS from './components/TestJS'
+import TestComponent from './components/TestComponent.vue'
+import TestEvent from './components/TestEvent.vue'
+import { ref } from 'vue'
+
+const title = ref('hello')
+const updateTime = ref(new Date().toLocaleString())
+
+const update = () => {
+  updateTime.value = new Date().toLocaleString()
+}
 </script>
 
 <template>
-  <TestA></TestA>
+  <TestEvent></TestEvent>
+  <!-- <TestComponent
+    @refresh-now="update"
+    @update="update"
+    :blogTitle="title"
+    :update-time="updateTime"
+  >
+    slot message
+  </TestComponent> -->
+
+  <!-- <TestA></TestA>
   <TestB></TestB>
   <TestComputedAttr></TestComputedAttr>
   <TestC></TestC>
+  --- 测试直接使用 ts 文件 ---
+  <TestJS></TestJS> -->
   <!-- <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
