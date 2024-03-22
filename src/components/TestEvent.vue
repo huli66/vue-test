@@ -14,7 +14,7 @@
   <div>TEST FORM</div>
   <div>
     <h3>手动实现</h3>
-    <input :value="text" @input="(event) => (text = event.target.value)" />
+    <!-- <input :value="text" @input="(event) => (text = event.target.value)" /> -->
     <input v-model="text" />
   </div>
   <textarea v-model="text"></textarea>

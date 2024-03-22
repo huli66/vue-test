@@ -8,6 +8,7 @@ import TestComputedAttr from './components/TestComputedAttr.vue'
 import TestJS from './components/TestJS'
 import TestComponent from './components/TestComponent.vue'
 import TestEvent from './components/TestEvent.vue'
+import TestWatch from './components/TestWatch.vue'
 import { ref } from 'vue'
 
 const title = ref('hello')
@@ -19,7 +20,8 @@ const update = () => {
 </script>
 
 <template>
-  <TestEvent></TestEvent>
+  <TestWatch></TestWatch>
+  <!-- <TestEvent></TestEvent> -->
   <!-- <TestComponent
     @refresh-now="update"
     @update="update"
